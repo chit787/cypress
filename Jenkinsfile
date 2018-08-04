@@ -9,7 +9,6 @@ pipeline {
     skipDefaultCheckout()
     timeout(time: 4, unit: 'HOURS')
     timestamps()
-    ansiColor('xterm')
   }
 
   stages {
@@ -20,30 +19,8 @@ pipeline {
             }
         }
 
-        tools {
-            jdk 'JDK 8u60'
-        }
-
         steps {
             checkout scm
-            dir('stash') {
-                unstash name: 'serverZip'
-            }
-            sh './gradlew apiTest -PuseDistributionLocation=stash'
-        }
-
-        post {
-            always {
-                script {
-
-                }
-            }
-            failure {
-
-            }
-            success {
-
-            }
         }
     }
   }
