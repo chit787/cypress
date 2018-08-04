@@ -1,0 +1,16 @@
+{
+  "name": "testbench2",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^3.0.3"
+  },
+  "scripts": {
+    "open": "./node_modules/.bin/cypress open",
+    "test": "./node_modules/.bin/cypress run"
+  },
+  "author": "",
+  "license": "ISC"
+}

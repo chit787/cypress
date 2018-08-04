@@ -1,0 +1,7 @@
+version: 2
+
+services:
+  cypress:
+    build: cypress
+  jenkins:
+    build: jenkins
