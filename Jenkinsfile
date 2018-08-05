@@ -21,6 +21,7 @@ pipeline {
 
         steps {
             checkout scm
+            sh 'echo 1'
         }
     }
   }
