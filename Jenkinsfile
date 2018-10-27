@@ -13,12 +13,6 @@ pipeline {
 
   stages {
     stage('cypress Tests') {
-        when {
-            anyOf {
-                branch 'master'
-            }
-        }
-
         steps {
             checkout scm
             sh 'echo 1'
